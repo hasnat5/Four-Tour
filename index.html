@@ -8,10 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
-    <link
-  href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css"
-  rel="stylesheet"
-/>
+    <script src="https://kit.fontawesome.com/d72801b4ea.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>     
     <title>Four Tour</title>
     <script>
@@ -27,6 +24,7 @@
                     'hasnat': "url('/asset/hasnat.JPG')",
                     'rafly': "url('/asset/rafly.jpeg')",
                     'naufal': "url('/asset/naufal.jpg')",
+                    'school': "url('/asset/smk4.jpg')",
                 },
 
                 colors: {
@@ -34,14 +32,16 @@
                     btnBlue: '#5561FF',
                     card: '#373951',
                     cardSection: '#3E405B',
+                    footer: '#2D2F45',
                 }
             }
           }
         }
       </script>
 </head>
-<body>
-    <main class="container mx-auto max-w-sm h-screen bg-primary border-b-2 border-red-500 px-4">
+<body class="bg-primary">
+    <!-- main -->
+    <main class="container mx-auto max-w-sm h-screen bg-school bg-center bg-cover bg-fixed border-b-2 border-red-500 px-4">
         <div class="grid gap-6">
             <h1 class="font-Montserrat text-white text-3xl">Virtual Tour SMKN 4 Bandung</h1>
             <p class="font-Inter text-white text-xs">Jelajahi SMKN 4 Bandung secara virtual tanpa perlu keluar rumah</p>
@@ -54,7 +54,7 @@
     </main> 
 
     <!-- school -->
-    <section class="container mx-auto max-w-sm h-screen bg-primary px-4 border-b-2 border-red-500">
+    <section class="container mx-auto max-w-sm bg-primary pt-20 px-4 border-b-2 border-red-500">
         <div class="grid gap-6 justify-items-center">
             <div class="mapouter"><div class="gmap_canvas rounded-xl"><iframe width="300" height="200" id="gmap_canvas" src="https://maps.google.com/maps?q=smkn%204%20bandung&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-a.com"></a><br><style>.mapouter{position:relative;text-align:right;height:200px;width:300px;}</style><a href="https://www.embedgooglemap.net">google map html embed</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:200px;width:300px;}</style></div></div>
     
@@ -69,7 +69,7 @@
     </section>
 
     <!-- team -->
-    <section class="container mx-auto max-w-sm bg-primary px-4">
+    <section class="container mx-auto max-w-sm bg-primary py-20 px-4">
         <div class="grid justify-items-center gap-16">
             <div class="grid gap-6 text-center">
                 <h1 class="font-Montserrat text-white text-2xl">Meet Our Team</h1>
@@ -92,14 +92,14 @@
                     <div class="h-[255px] bg-rafly bg-center bg-cover"></div>
                     <div class="bg-cardSection rounded-3xl p-6 h-auto">
                         <div class="grid gap-4 w-auto text-center">
-                            <h1 class="font-Montserrat text-white text-2xl">Muhammad Rafly Pratama</h1>
+                            <h1 class="font-Montserrat text-white text-lg md:text-2xl">Muhammad Rafly Pratama</h1>
                             <p class="font-Inter text-white text-base">CEO</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="grid content-between bg-card w-72 h-[400px] rounded-3xl overflow-hidden">
-                    <div class="h-[283px] bg-hasnat bg-center bg-cover"></div>
+                    <div class="h-[254px] bg-hasnat bg-center bg-cover"></div>
                     <div class="bg-cardSection rounded-3xl p-6 h-auto">
                         <div class="grid gap-4 w-auto text-center">
                             <h1 class="font-Montserrat text-white text-2xl">Hasnat Ferdiananda</h1>
@@ -115,5 +115,24 @@
         </div>
     </section>
     
+    <footer class="container mx-auto max-w-sm bg-footer rounded-t-3xl py-8 px-6">
+        <div class="grid gap-6">
+            <!-- logo -->
+            <div class="grid gap-3">
+                <a href="#" class="inline-flex">
+                    <img src="asset/map.png" class="h-6 mr-2" alt="">
+                    <h1 class="font-Montserrat text-[#FFFFFFCC] text-lg">FOURTOUR</h1>
+                </a>
+                <p class="font-Inter text-[#FFFFFFCC] text-xs">© 2022 FourTour. All rights reserved.</p>
+            </div>
+    
+            <!-- sosial media -->
+            <div class="flex gap-4 justify-center">
+                <a href="#" target="_blank"><i class="fa-brands fa-youtube fa-lg text-[#FFFFFFCC]"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram fa-lg text-[#FFFFFFCC]"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook fa-lg text-[#FFFFFFCC]"></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
