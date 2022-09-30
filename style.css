@@ -1,3 +1,10 @@
-h1{
-    background-image: url(asset/);
+::-webkit-scrollbar {
+    width: 3px;
+} ::-webkit-scrollbar-track {
+    background: none;
+} ::-webkit-scrollbar-thumb {
+    background: #393e46;
+    border-radius: 3px;
+} ::-webkit-scrollbar-thumb:hover {
+    background: #0095f6;
 }

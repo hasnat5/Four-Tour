@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- GOOGLE FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <!-- ICON -->
     <script src="https://kit.fontawesome.com/d72801b4ea.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.tailwindcss.com"></script>     
+    <!-- STYLE -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>   
+
     <title>Four Tour</title>
     <script>
         tailwind.config = {
@@ -40,45 +46,85 @@
       </script>
 </head>
 <body class="bg-primary">
+
     <!-- main -->
-    <main class="container mx-auto max-w-sm h-screen bg-school bg-center bg-cover bg-fixed border-b-2 border-red-500 px-4">
+    <main class="container mx-auto min-w-full h-screen bg-school bg-center bg-cover bg-fixed">
         <div class="grid gap-6">
-            <h1 class="font-Montserrat text-white text-3xl">Virtual Tour SMKN 4 Bandung</h1>
-            <p class="font-Inter text-white text-xs">Jelajahi SMKN 4 Bandung secara virtual tanpa perlu keluar rumah</p>
+            <h1 class="font-Montserrat text-white text-3xl md:text-6xl">Virtual Tour SMKN 4 Bandung</h1>
+            <p class="font-Inter text-white text-xs md:text-sm">Jelajahi SMKN 4 Bandung secara virtual tanpa perlu keluar rumah</p>
             <!-- button -->
             <div>
-                <a class="inline-block bg-btnBlue py-2 px-6 rounded-xl text-white text-xs leading-6 font-Inter font-semibold" href="https://www.muse.place/smkn-4" target="_blank">Mulai Tour</a>
-                <a class="inline-block bg-[#FFFFFF1A] ml-2 py-2 px-6 rounded-xl text-white text-xs leading-6 font-Inter font-semibold" href="#">Pelajari</a>
+                <a class="inline-block bg-btnBlue py-2 px-6 rounded-xl text-white text-xs leading-6 font-Inter font-semibold md:text-base md:py-3 md:px-8" href="https://www.muse.place/smkn-4" target="_blank">Mulai Tour</a>
+                <a class="inline-block bg-[#FFFFFF1A] ml-2 py-2 px-6 rounded-xl text-white text-xs leading-6 font-Inter font-semibold md:text-base md:py-3 md:px-8" href="#">Pelajari</a>
             </div>
         </div>
     </main> 
 
     <!-- school -->
-    <section class="container mx-auto max-w-sm bg-primary pt-20 px-4 border-b-2 border-red-500">
-        <div class="grid gap-6 justify-items-center">
-            <div class="mapouter"><div class="gmap_canvas rounded-xl"><iframe width="300" height="200" id="gmap_canvas" src="https://maps.google.com/maps?q=smkn%204%20bandung&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-a.com"></a><br><style>.mapouter{position:relative;text-align:right;height:200px;width:300px;}</style><a href="https://www.embedgooglemap.net">google map html embed</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:200px;width:300px;}</style></div></div>
-    
-            <div class="grid gap-6">
-                <h1 class="font-Montserrat text-white text-2xl">SMKN 4 Bandung</h1>
-                <p class="font-Inter text-white text-xs">SMKN 4 BANDUNG adalah Sekolah Menengah Kejuruan yang memiliki kelompok bidang keahlian Ketenaga Listrikan, Audio Video, dan Teknik Komputer dan Informatika</p>
+    <section id="school" class="container mx-auto max-w-full pt-20 px-4 md:px-12">
+        <div class="grid gap-6 justify-items-center md:grid-cols-2">
+
+            <!-- MAPS -->
+            <div class="mapouter">
+                <div class="gmap_canvas rounded-xl">
+                    <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=smkn%204%20bandung&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+
+                    <style>
+                        .mapouter{
+                            position:relative;
+                            text-align:right;
+                            height:200px;
+                            width:300px;
+                        }
+
+                        .gmap_canvas{
+                            overflow:hidden;
+                            background:none!important;
+                            height:200px;
+                            width:300px;
+                        }
+
+                        @media (min-width: 1024px) {
+                            .mapouter {
+                                height: 400px!important;
+                                width: 500px!important;
+                            }
+        
+                            .gmap_canvas {
+                                height: 400px!important;
+                                width: 500px!important;
+                            }
+                        
+                            .gmap_iframe {
+                                height: 400px!important;
+                                width: 500px!important;
+                            }
+                        }
+                    </style>
+                </div>
+            </div>
+
+            <div class="grid gap-6 content-start">
+                <h1 class="font-Montserrat text-white text-2xl md:text-4xl">SMKN 4 Bandung</h1>
+                <p class="font-Inter text-white text-xs md:text-base">SMKN 4 BANDUNG adalah Sekolah Menengah Kejuruan yang memiliki kelompok bidang keahlian Ketenaga Listrikan, Audio Video, dan Teknik Komputer dan Informatika</p>
                 <div>
-                    <a class="text-center inline-block bg-btnBlue py-2 px-6 rounded-xl text-white text-xs leading-6 font-Inter font-semibold" data-ripple-light="true" target="_blank" href="https://smkn4bdg.sch.id/">Website<span class="material-icons text-base align-middle pl-2">arrow_forward</span></a>
+                    <a class="text-center inline-block bg-btnBlue py-2 px-6 rounded-xl text-white text-xs leading-6 font-Inter font-semibold md:text-base md:py-3 md:px-8" target="_blank" href="https://smkn4bdg.sch.id/">Website<span class="material-icons text-base align-middle pl-2">arrow_forward</span></a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- team -->
-    <section class="container mx-auto max-w-sm bg-primary py-20 px-4">
-        <div class="grid justify-items-center gap-16">
+    <section class="container mx-auto max-w-full py-20 px-4 md:px-12">
+        <div class="grid gap-16">
             <div class="grid gap-6 text-center">
-                <h1 class="font-Montserrat text-white text-2xl">Meet Our Team</h1>
-                <p class="font-Inter text-white text-xs">Sebuah ekosistem sempurna tak akan pernah tercipta tanpa tim yang hebat didalamnya </p>
+                <h1 class="font-Montserrat text-white text-2xl md:text-4xl">Meet Our Team</h1>
+                <p class="font-Inter text-white text-xs md:text-base">Sebuah ekosistem sempurna tak akan pernah tercipta tanpa tim yang hebat didalamnya </p>
             </div>
     
             <!-- card -->
-            <div class="grid gap-8">
-                <div class="grid content-between bg-card w-72 h-[400px] rounded-3xl overflow-hidden">
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
+                <div class="grid  bg-card w-72 h-[400px] rounded-3xl overflow-hidden">
                     <div class="h-[215px] bg-naufal bg-center bg-cover"></div>
                     <div class="bg-cardSection rounded-3xl p-6 h-auto">
                         <div class="grid gap-4 w-auto text-center">
@@ -88,7 +134,7 @@
                     </div>
                 </div>
     
-                <div class="grid content-between bg-card w-72 h-[400px] rounded-3xl overflow-hidden">
+                <div class="grid bg-card w-72 h-[400px] rounded-3xl overflow-hidden">
                     <div class="h-[255px] bg-rafly bg-center bg-cover"></div>
                     <div class="bg-cardSection rounded-3xl p-6 h-auto">
                         <div class="grid gap-4 w-auto text-center">
@@ -98,7 +144,7 @@
                     </div>
                 </div>
 
-                <div class="grid content-between bg-card w-72 h-[400px] rounded-3xl overflow-hidden">
+                <div class="grid bg-card w-72 h-[400px] rounded-3xl overflow-hidden md:col-span-2 lg:col-span-1">
                     <div class="h-[254px] bg-hasnat bg-center bg-cover"></div>
                     <div class="bg-cardSection rounded-3xl p-6 h-auto">
                         <div class="grid gap-4 w-auto text-center">
@@ -109,31 +155,34 @@
                 </div>
             </div>
 
-            <div>
-                <a class="inline-block bg-btnBlue py-2 px-6 rounded-xl text-white text-xs leading-6 font-Inter font-semibold" href="https://www.muse.place/smkn-4" target="_blank">Mulai Tour Online</a>
+            <div class="grid justify-center">
+                <a class="inline-block bg-btnBlue py-2 px-6 rounded-xl text-white text-xs leading-6 font-Inter font-semibold md:text-base md:py-3 md:px-8" href="https://www.muse.place/smkn-4" target="_blank">Mulai Tour Online</a>
             </div>
         </div>
     </section>
     
-    <footer class="container mx-auto max-w-sm bg-footer rounded-t-3xl py-8 px-6">
-        <div class="grid gap-6">
+    <footer class="container mx-auto max-w-full bg-footer rounded-t-3xl py-8 px-6 md:px-12 md:py-10">
+        <div class="grid gap-6 md:grid-cols-2 content-center">
             <!-- logo -->
             <div class="grid gap-3">
-                <a href="#" class="inline-flex">
+                <a href="#" class="inline-flex items-center">
                     <img src="asset/map.png" class="h-6 mr-2" alt="">
-                    <h1 class="font-Montserrat text-[#FFFFFFCC] text-lg">FOURTOUR</h1>
+                    <h1 class="font-Montserrat text-[#FFFFFFCC] text-lg md:text-2xl">FOURTOUR</h1>
                 </a>
-                <p class="font-Inter text-[#FFFFFFCC] text-xs">© 2022 FourTour. All rights reserved.</p>
+                <p class="font-Inter text-[#FFFFFFCC] text-xs md:text-base">© 2022 FourTour. All rights reserved.</p>
             </div>
     
             <!-- sosial media -->
-            <div class="flex gap-4 justify-center">
+            <div class="flex gap-4 justify-center md:justify-end md:items-center md:gap-6">
                 <a href="https://www.youtube.com/c/SMKN4BANDUNGOfficial" target="_blank"><i class="fa-brands fa-youtube fa-lg text-[#FFFFFFCC]"></i></a>
                 <a href="https://www.instagram.com/smknegeri4bandung/" target="_blank"><i class="fa-brands fa-instagram fa-lg text-[#FFFFFFCC]"></i></a>
                 <a href="https://www.facebook.com/smkn4bandung/" target="_blank"><i class="fa-brands fa-facebook fa-lg text-[#FFFFFFCC]"></i></a>
             </div>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
 
@@ -141,6 +190,5 @@
 - navbar
 - main page
 - image decoration
-- desktop size
 
 -->
